@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/bacgrounCorlor">
+
+    <TextView
+        android:id="@+id/cheosName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="CHEOSE ORDER DRINK"
+        android:textColor="@color/btnColor"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/SelectItemDrink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:hint="Select Your Item "
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        app:layout_constraintTop_toBottomOf="@id/cheosName"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp">
+        <AutoCompleteTextView
+            android:id="@+id/itemsIs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="none"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/hintPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The Price"
+        android:textStyle="bold"
+        android:textColor="@color/btnColor"
+        app:layout_constraintTop_toBottomOf="@+id/SelectItemDrink"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="16dp"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/resaltPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hintPrice"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:hint="The Price Of Item Will Be Is : "
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/resalt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:enabled="false"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="56dp"
+        app:layout_constraintTop_toBottomOf="@+id/resaltPage"
+        app:backgroundTint="@color/btnColor"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
